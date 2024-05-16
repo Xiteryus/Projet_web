@@ -3,15 +3,15 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-y: hidden; /* Désactive le défilement vertical */
+    overflow-y: hidden;
 }
 #systeme {
-    width: 100%; /* La largeur du conteneur est la même que la fenêtre */
-    height: auto; /* Hauteur automatique pour s'adapter à l'image */
+    width: 100%; 
+    height: auto;
 }
 #image_systeme {
-    width: 3000px; /* Largeur de l'image */
-    height: 817px; /* Hauteur de l'image */
+    width: 3000px; 
+    height: 817px; 
     display: block;
-    margin: 0 auto; /* Centre l'image horizontalement */
+    margin: 0 auto; 
 }
