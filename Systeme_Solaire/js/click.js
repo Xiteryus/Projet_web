@@ -79,3 +79,12 @@ function survole(event) {
         p.style.display = "none";
     }
 }
+
+
+function opencarre() {
+            document.querySelector(".contour-carre").style.display = "block";
+        }
+
+function closecarre() {
+            document.querySelector(".contour-carre").style.display = "none";
+        }
