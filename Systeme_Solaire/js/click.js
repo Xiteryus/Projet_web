@@ -22,8 +22,6 @@ function f(event) {
     if (x >= 1265 && x <= 1621 && y >= 193 && y <= 565) {
         window.location.href = "jupiter.html";
     }
-
-
 }
 
 window.addEventListener("mousemove", survole);

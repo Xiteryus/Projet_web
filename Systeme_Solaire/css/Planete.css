@@ -1,21 +1,44 @@
 body{
     background-image: url("../img/fond\ d\'ecran.jpeg");
+    
 }
 
-.fuse{
-    position: absolute;
-    top: 10px;
-    left: 0;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+}
+.title-container h1 {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.fuse {
+    margin-right: auto;
     width: auto;
     height: 50px;
+    cursor: pointer;
+}
+.fuse-droite {
+    margin-left: auto;
+    width: auto;
+    height: 50px;
+    cursor: pointer;
 }
 
-.fuse-droite{
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.icon-sys{
     width: auto;
-    height: 50px;
+    height: 60px;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+header{
+    position: sticky;
 }
 
 header h1{
@@ -31,7 +54,8 @@ table {
     padding: 20px;
     
 }
-    caption {
+
+caption {
     background-color: #1d8dfc; 
     color: white;
     padding: 10px;
@@ -118,7 +142,6 @@ h1{
     width: 80%; 
     text-align: center;
 }
-
 
 .btn-close{
     right:10px;
