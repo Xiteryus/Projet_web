@@ -8,6 +8,7 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <img src="../img/petite_fusee-removebg-preview.png" alt="Test" class="fuse" onclick="window.location.href='Terre.html'">
@@ -21,65 +22,20 @@
         <img src="../img/petite_fusee-removebg-preview-droite.png" alt="Test" class="fuse-droite" onclick="window.location.href='ceres.html'">
     </header>
     <div class = global>
+        
         <div class="Gauche">
             <img src="../img/Mars.gif" alt="Gif Mars" id="Mercure" class="image-planete" onclick="opencarre()">
-
-            <div class="carre">
-                <div class="contour-image">
-                    <div class="survol-planete">
-                    </div>
-                    <button type="button" class="btn-close" onclick="closecarre()"></button>
-                    <img src="../img/Mars_Géolocalisation.jpg" alt="test" class="planisphere" id="planisphere-mars">
+        </div>
+        <div id="test">
+        <div class="carre">
+            <div class="contour-image">
+                <div class="survol-planete">
                 </div>
+                <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecarre()" style="width: 30px; height: 30px;">
+                <img src="../img/Mars_Géolocalisation.jpg" alt="test" class="planisphere" id="planisphere-mars">
             </div>
         </div>
-        <script>
-                    document.getElementById("planisphere-mars").addEventListener("mousemove", survole);
-
-function survole(event) {
-    var x = event.offsetX;
-    var y = event.offsetY;
-    console.log(x,y);
-    var p = document.getElementsByClassName("survol-planete")[0];
-
-    if (x >= 154 - 5 && x <= 154 + 5 && y >= 233 - 5 && y <= 233 + 5) {
-
-        p.innerHTML = "Mont Olympus<br> 22km de haut";
-        p.style.display = "block";
-        p.style.left = (x + 30) + 'px';
-        p.style.top  = (y + 50) + 'px';
-
-    } 
-    else if (x >= 250 - 5 && x <= 250 + 5 && y >= 256 - 5 && y <= 256 + 5) {
-
-        p.innerHTML = "Mont Ascraeus";
-        p.style.display = "block";
-        p.style.left = (x + 30) + 'px';
-        p.style.top  = (y + 50) + 'px';
-
-    } 
-    else if (x >= 222 - 5 && x <= 222 + 5 && y >= 290 - 5 && y <= 290 + 5) {
-
-        p.innerHTML = "Mont Pavonis";
-        p.style.display = "block";
-        p.style.left = (x + 30) + 'px';
-        p.style.top  = (y + 50) + 'px';
-
-    }
-    else if (x >= 197 - 5 && x <= 197 + 5 && y >= 324 - 5 && y <= 324 + 5) {
-
-        p.innerHTML = "Mont Arsia";
-        p.style.display = "block";
-        p.style.left = (x + 30) + 'px';
-        p.style.top  = (y + 50) + 'px';
-
-} 
-    else {
-        p.style.display = "none";
-    }
-
-}
-        </script>
+        </div>
         <div class="contenu">
             <div class="info-planete" id="">
                 <p>
@@ -129,25 +85,25 @@ function survole(event) {
             </table>
             <div class="info-planete">
                 <p>
-                    Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire.
+                    Mars ne cesse de surprendre par ses caractéristiques uniques et ses mystères encore non résolus. L'une des caractéristiques les plus intrigantes de Mars est la présence de traces d'eau sous forme de glace et de sels hydratés. Ces découvertes alimentent les spéculations sur la possibilité d'une vie microbienne passée ou présente sur la planète.
+                    <br><br>
+                    La planète est également célèbre pour sa fine atmosphère composée principalement de dioxyde de carbone, avec des traces d'azote et d'argon. Cette atmosphère ténue ne permet pas à Mars de retenir beaucoup de chaleur, ce qui entraîne des températures extrêmement froides, pouvant descendre jusqu'à -125°C près des pôles en hiver. Cependant, les étés martiens peuvent être relativement plus chauds, atteignant des températures allant jusqu'à 20°C.
+                    <br><br>
+                    Mars est le théâtre de nombreuses tempêtes de poussière, certaines pouvant recouvrir la planète entière et durer plusieurs mois. Ces tempêtes de poussière sont les plus grandes du système solaire et jouent un rôle crucial dans le déplacement des sédiments à la surface de Mars.
+                    <br><br>
+                    Les missions d'exploration, telles que celles menées par les rovers de la NASA comme Curiosity et Perseverance, ainsi que par la sonde InSight, ont considérablement augmenté notre compréhension de Mars. Les analyses de sol et de roche ont révélé la présence de minéraux qui ne se forment qu'en présence d'eau, renforçant l'hypothèse selon laquelle Mars a eu, dans un passé lointain, des conditions environnementales propices à la vie.
+                    <br><br>
+                    En outre, la faible gravité de Mars, environ 38% de celle de la Terre, et l'absence de champ magnétique global posent des défis uniques pour les futures missions humaines. Cependant, ces mêmes conditions offrent des opportunités pour l'innovation technologique et scientifique. Les projets en cours incluent la possibilité de terraformer certaines régions pour créer des habitats humains et d'exploiter les ressources locales, comme l'eau martienne, pour soutenir les colonies humaines potentielles.
+                    <br><br>
+                    Mars reste un objectif clé pour l'exploration spatiale future, symbolisant notre quête de connaissance et notre désir d'expansion au-delà de notre planète d'origine. Les avancées technologiques et les missions continues promettent de dévoiler encore plus de secrets de cette fascinante planète rouge.
                 </p>
             </div>
         </div>
     </div> 
 </body>
+<script>
+            
+    document.getElementById("planisphere-mars").addEventListener("mousemove", function(event){survole(event, "mars");});
+
+</script>
 </html>

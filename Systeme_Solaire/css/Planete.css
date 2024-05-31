@@ -1,6 +1,6 @@
 body{
     background-image: url("../img/fond\ d\'ecran.jpeg");
-    
+    overflow-x: auto;
 }
 
 header {
@@ -45,31 +45,32 @@ header h1{
     color: white;
 }
 
-
 table {
     width: 75%;
     border-collapse: collapse;
     margin: 20px auto; 
-    background-color: #f0f0f0; 
+    background-color: #1c1c1c; ; 
     padding: 20px;
     
 }
 
 caption {
-    background-color: #1d8dfc; 
-    color: white;
+    background-color: #202026; 
+    color: rgb(255, 255, 255);
     padding: 10px;
     font-size: large;
 }
 
 th, td {
-    border: 1px solid black; 
+    border: 1px solid #2a2727; 
     padding: 10px;
     text-align: left;
+    color:white
 }
 
 th {
-    background-color: #e0e0e0; 
+    background-color:#1e1e22; 
+    color: white;
 }
 
 #texte-rotation,#texte-orbitale{
@@ -124,11 +125,16 @@ h1{
     margin-left: 37%;
 }
 
+#test{
+    position: relative;
+}
+
 .carre {
     display: none; 
-    position: fixed; 
-    left: 5%;
-    top: 7%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .contour-image {
@@ -140,24 +146,23 @@ h1{
 .btn-close{
     position: absolute;
     top: 7px;
-    right:10px;
-    color: #000000;
-    border: solid black 1px;
-    border-radius: 5px;
+    right: 10px;
     height: 10px;
     width: auto;
     cursor: pointer;
 }
 
 .planisphere{
+    max-width: 1200px ;
     width: 1200px;
     height: auto;
+    margin: 0;
 }
 
 .survol-planete{
     display: none;
     position: absolute;
-    background-image: url("../img/fond\ d\'ecran.jpeg");
+    background-color: black;
     border: 1px solid black;
     color: white;
     padding: 5px;
