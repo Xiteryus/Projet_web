@@ -122,3 +122,32 @@ function opencarre() {
 function closecarre() {
             document.querySelector(".carre").style.display = "none";
         }
+
+function opencaroussel() {
+            document.querySelector(".carre-caroussel").style.display = "flex";
+        }
+
+function closecaroussel() {
+            document.querySelector(".carre-caroussel").style.display = "none";
+        }
+
+
+
+//-----------------------------
+const images = [
+    '../img/Jupiter1.webp',
+    '../img/jupiter2.webp',
+    '../img/jupiter3.webp',
+];
+
+let currentIndex = 0;
+
+function prochaineImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('photo-caroussel').src = images[currentIndex];
+}
+
+function precedenteImage(){
+    currentIndex = (currentIndex - 1) % images.length;
+    document.getElementById('photo-caroussel').src = images[currentIndex];
+}

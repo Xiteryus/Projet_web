@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Planete.css">
+    <script type="text/javascript" src="../js/click.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -20,15 +21,22 @@
     </header>
     <div class = global>
         <div class="Gauche">
-            <img src="../img/jupiter.webp" alt="test" class="image-planete">
+            <img src="../img/jupiter.webp" alt="test" class="image-planete" onclick="opencarre()">
+            <div id="test">
+                <div class="carre">
+                    <div class="contour-image">
+                        <div class="survol-planete">
+                        </div>
+                        <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecarre()" style="width: 30px; height: 30px;">
+                        <img src="../img/Jupiter_Cylindrical_Map_-_Dec_2000_PIA07782.jpg" alt="test" class="planisphere" id="planisphere-jupiter">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="contenu">
             <div class="info-planete" id="">
                 <p>
-                    Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire.
+                    Jupiter, la cinquième planète à partir du Soleil, est la plus grande de notre système solaire. Elle est souvent surnommée le "roi des planètes" en raison de sa taille colossale et de son influence gravitationnelle. Jupiter est une planète fascinante non seulement par sa taille, mais aussi par sa composition, ses nombreuses lunes et ses spectaculaires phénomènes atmosphériques.
                 </p>
             </div>
             <table>
@@ -71,23 +79,36 @@
             </table>
             <div class="info-planete">
                 <p>
-                    Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire.
+                    <strong>Caractéristiques générales</strong><br>
+Jupiter est une géante gazeuse, composée principalement d'hydrogène et d'hélium. Avec un diamètre d'environ 143 000 kilomètres, elle pourrait contenir plus de 1 300 Terres à l'intérieur de son volume. Sa masse est également impressionnante, représentant plus de deux fois la masse combinée de toutes les autres planètes du système solaire.
+<br><br>
+<strong>Atmosphère et climat</strong><br>
+L'atmosphère de Jupiter est composée de plusieurs couches de nuages colorés, principalement constitués d'ammoniac, de méthane et d'eau. Ces nuages forment des bandes horizontales distinctives visibles depuis la Terre. Parmi les caractéristiques les plus marquantes de l'atmosphère de Jupiter, on trouve la Grande Tache Rouge, une immense tempête anticyclonique plus vaste que la Terre et qui dure depuis au moins 400 ans.
+<br><br>
+<strong>Champ magnétique et anneaux</strong><br>
+Jupiter possède un champ magnétique extrêmement puissant, environ 20 000 fois plus fort que celui de la Terre. Ce champ magnétique intense crée une immense magnétosphère qui protège la planète et ses lunes des radiations solaires. Bien que moins connus que ceux de Saturne, Jupiter a également un système d'anneaux, principalement composés de particules de poussière microscopiques.
+<br><br>
+<strong>Les lunes de Jupiter</strong><br>
+Jupiter est entourée d'un cortège impressionnant de lunes, avec au moins 79 satellites naturels confirmés. Les quatre plus grandes et les plus célèbres sont Io, Europe, Ganymède et Callisto, découvertes par Galilée en 1610. Ces lunes, connues sous le nom de satellites galiléens, présentent chacune des caractéristiques uniques. Par exemple, Europe est réputée pour sa surface glacée et pourrait abriter un océan sous-terrain, tandis que Ganymède est la plus grande lune du système solaire, même plus grande que Mercure.
+<br><br>
+<strong>Exploration et observation</strong><br>
+Depuis les premières observations télescopiques de Galilée, Jupiter a été étudiée par plusieurs missions spatiales, dont les sondes Pioneer, Voyager, Galileo et Juno. Ces missions ont fourni une mine d'informations sur la composition, l'atmosphère, les lunes et le champ magnétique de la planète. La sonde Juno, lancée par la NASA en 2011, continue d'envoyer des données précieuses, aidant les scientifiques à comprendre les mystères de cette géante gazeuse.
                 </p>
+            </div>
+            
+            <div class="photos">
+                <a onclick="opencaroussel()"><h1>PLUS DE PHOTOS</h1></a>
+                <div id="test">
+                    <div class="carre-caroussel">
+                        <div class="contour-caroussel">
+                            <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
+                            <img src="../img/Jupiter1.webp" alt="test" class="photo-caroussel" id="photo-caroussel">
+                            <button onclick="precedenteImage()">precedent</button>
+                            <button onclick="prochaineImage()">suivant</button>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div> 

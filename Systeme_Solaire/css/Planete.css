@@ -129,7 +129,7 @@ h1{
     position: relative;
 }
 
-.carre {
+.carre , .carre-caroussel  {
     display: none; 
     position: fixed;
     top: 50%;
@@ -137,7 +137,7 @@ h1{
     transform: translate(-50%,-50%);
 }
 
-.contour-image {
+.contour-image, .contour-caroussel {
     background-color: rgb(255, 254, 254); 
     padding: 40px; 
     border-radius: 10px;
@@ -169,3 +169,13 @@ h1{
     border-radius: 20px;
 }
 
+.photos{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.photo-caroussel{
+    width: auto;
+    height: 600px;
+}
