@@ -25,8 +25,8 @@ function f(event) {
 
 
 }
-
-window.addEventListener("mousemove", survole);
+/*
+document.getElementById("image_systeme").addEventListener("mousemove", survole);
 
 function survole(event) {
     var x = event.offsetX;
@@ -78,13 +78,13 @@ function survole(event) {
     else {
         p.style.display = "none";
     }
-}
+}*/
 
 
 function opencarre() {
-            document.querySelector(".contour-carre").style.display = "block";
+            document.querySelector(".carre").style.display = "block";
         }
 
 function closecarre() {
-            document.querySelector(".contour-carre").style.display = "none";
+            document.querySelector(".carre").style.display = "none";
         }
