@@ -40,36 +40,36 @@
                 </p>
             </div>
             <table>
-                <caption>Mars en chiffre</caption>
+                <caption>Jupiter en chiffre</caption>
                 <tbody>
                     <tr>
                         <th>Diamètre moyen</th>
-                        <td>6 780 km</td>
+                        <td>142 984 km</td>
                     </tr>
                     <tr>
                         <th id="rotation">Periode de rotation(en jour)
                             <p id="texte-rotation">La période de rotation est la durée mise par un astre pour faire un tour sur lui-même.</p>
                         </th>
-                        <td>24,6 heures</td>
+                        <td>9,93 heures</td>
                         
                     </tr> 
                     <tr>
                         <th id="orbitale">Periode orbitale(année)
                             <p id="texte-orbitale">La période de révolution, aussi appelée période orbitale, est la durée mise par un astre pour accomplir une révolution complète autour d’un autre astre</p>
                         </th>
-                        <td>687 jours</td>
+                        <td>11.86 années</td>
                     </tr> 
                     <tr>
                         <th>Temperature minimal</th>
-                        <td>-143°C</td>
+                        <td>-108°C</td>
                     </tr> 
                     <tr>
                         <th>Temperature maximale</th>
-                        <td>35°C</td>
+                        <td>INCONU</td>
                     </tr> 
                     <tr>
                         <th>Lunes</th>
-                        <td>2</td>
+                        <td>Plus de 67</td>
                     </tr> 
                     <tr>
                         <th>Population</th>
@@ -78,6 +78,8 @@
                 </tbody>
             </table>
             <div class="info-planete">
+                <h2>Informations generale :  </h2>
+
                 <p>
                     <strong>Caractéristiques générales</strong><br>
 Jupiter est une géante gazeuse, composée principalement d'hydrogène et d'hélium. Avec un diamètre d'environ 143 000 kilomètres, elle pourrait contenir plus de 1 300 Terres à l'intérieur de son volume. Sa masse est également impressionnante, représentant plus de deux fois la masse combinée de toutes les autres planètes du système solaire.
@@ -103,14 +105,34 @@ Depuis les premières observations télescopiques de Galilée, Jupiter a été �
                         <div class="contour-caroussel">
                             <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
                             <img src="../img/Jupiter1.webp" alt="test" class="photo-caroussel" id="photo-caroussel">
-                            <button onclick="precedenteImage()">precedent</button>
-                            <button onclick="prochaineImage()">suivant</button>
-
+                            <div class="photo-legende" id="photo-legende">Nuage Jupiter</div>
+                            <div class="bouton">
+                                <button id="precedent-btn" onclick="precedenteImage()">précédent</button>            
+                                <button onclick="prochaineImage()">suivant</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="info-planete">
+                <h2>Missions vers jupiter :  </h2>
+                <ul>
+                    <li>Pionner 10 : Voyage vers Jupiter</li>
+                    <li>Pionner 11 : Voyage vers Jupiter</li>
+                    <li>Voyager 1 : Voyage vers Jupiter</li>
+                    <li>Voyager 2 : Voyage vers Jupiter</li>
+                    <li>Galileo 10 : Survol et Vehicule Orbitale</li>
+                    <li>New Horizons : Voyage vers Jupiter</li>
+                    <li>Juno : Survole (en cours)</li>
+                </ul>
+            </div>
         </div>
     </div> 
 </body>
+<script>
+            
+    document.getElementById("planisphere-jupiter").addEventListener("mousemove", function(event){survole(event, "jupiter");});
+
+</script>
 </html>

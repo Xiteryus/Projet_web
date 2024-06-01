@@ -106,6 +106,14 @@ function survole(event, page) {
             p.style.display = "none";
         }
     }
+    else if(page == "jupiter"){
+        if (x >= 434 -20 && x <= 434+20 && y >= 364-20 && y <= 364+20) {
+            afficherp(p, x, y, "<b>Tache rouge junior</b>",30,50);
+        } 
+        else {
+            p.style.display = "none";
+        }
+    }
 }
 
 function afficherp(element, x, y, text, diffX = 10, diffY = 10) {
@@ -135,19 +143,29 @@ function closecaroussel() {
 
 //-----------------------------
 const images = [
-    '../img/Jupiter1.webp',
-    '../img/jupiter2.webp',
-    '../img/jupiter3.webp',
+    { src: '../img/Jupiter1.webp', legende: 'Nuage Jupiter' },
+    { src: '../img/jupiter2.webp', legende: 'Nuage Jupiter' },
+    { src: '../img/jupiter3.webp', legende: 'Nuage Jupiter' },
+    {src:'../img/jupiter4.jpg', legende :'Satelite de Jupiter : Europe'},
+    {src:'../img/Jupiter5.webp',legende: 'Anneaux de Jupiter vus par Voyager 2'}
 ];
 
 let currentIndex = 0;
 
-function prochaineImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById('photo-caroussel').src = images[currentIndex];
+function updateCaroussel() {
+    document.getElementById('photo-caroussel').src = images[currentIndex].src;
+    document.getElementById('photo-legende').innerText = images[currentIndex].legende;
+    document.getElementById('precedent-btn').disabled = currentIndex === 0;
 }
 
-function precedenteImage(){
-    currentIndex = (currentIndex - 1) % images.length;
-    document.getElementById('photo-caroussel').src = images[currentIndex];
+function prochaineImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCaroussel();
+}
+
+function precedenteImage() {
+    if (currentIndex > 0) {
+        currentIndex = (currentIndex - 1) % images.length;
+        updateCaroussel();
+    }
 }
