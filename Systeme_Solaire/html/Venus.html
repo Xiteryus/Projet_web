@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Planete.css">
-    <title>Document</title>
+    <script type="text/javascript" src="../js/click.js"></script>
+    <title>système solaire - Vénus</title>
 </head>
 <body>
     <header>
-        <img src="../img/petite_fusee-removebg-preview.png" alt="Test" class="fuse" onclick="window.location.href='Mercure.html'">
+        <img src="../img/petite_fusee-removebg-preview.png" alt="fusee gauche" class="fuse" onclick="window.location.href='Mercure.html'">
         
         <div class="title-container">
             <img src="../img/icon sys solaire 1.png" alt="icon-systeme solaire" class="icon-sys" onclick="window.location.href='accueil.html'">
             <h1>VENUS</h1>
-            <img src="../img/icon sys solaire 2.png" alt="" class="icon-sys" onclick="window.location.href='accueil.html'">
+            <img src="../img/icon sys solaire 2.png" alt="icon-systeme solaire" class="icon-sys" onclick="window.location.href='accueil.html'">
         </div>
         
-        <img src="../img/petite_fusee-removebg-preview-droite.png" alt="Test" class="fuse-droite" onclick="window.location.href='Terre.html'">
+        <img src="../img/petite_fusee-removebg-preview-droite.png" alt="fusee droite" class="fuse-droite" onclick="window.location.href='Terre.html'">
     </header>
     <div class = global>
         <div class="Gauche">
-            <img src="../img/Venus" alt="test" class="image-planete">
+            <img src="../img/Venus" alt="venus gif" class="image-planete" onclick="opencarre()">
+        </div>
+        <div id="test">
+            <div class="carre">
+                <div class="contour-image">
+                    <div class="survol-planete">
+                    </div>
+                    <img src="../img/signe-de-la-croix.png" alt="petite croix" class="btn-close" onclick="closecarre()" style="width: 30px; height: 30px;">
+                    <img src="../img/venus planisphere.jpg" alt="venus planisphere" class="planisphere" id="planisphere-venus">
+                </div>
+            </div>
         </div>
         <div class="contenu">
-            <div class="info-planete" id="">
+            <div class="info-planete">
                 <p>
                     Test
                 </p>
@@ -75,4 +86,9 @@
         </div>
     </div> 
 </body>
+<script>
+            
+    document.getElementById("planisphere-venus").addEventListener("mousemove", function(event){survole(event, "venus");});
+
+</script>
 </html>

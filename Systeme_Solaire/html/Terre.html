@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Planete.css">
-    <title>Document</title>
+    <script type="text/javascript" src="../js/click.js"></script>
+    <title>système solaire - Terre</title>
 </head>
 <body>
     <header>
@@ -18,12 +19,23 @@
         
         <img src="../img/petite_fusee-removebg-preview-droite.png" alt="Test" class="fuse-droite" onclick="window.location.href='mars.html'">
     </header>
+
     <div class = global>
         <div class="Gauche">
-            <img src="../img/Terre.gif" alt="test" class="image-planete">
+            <img src="../img/Terre.gif" alt="test" class="image-planete"  onclick="opencarre()">
+        </div>
+        <div id="test">
+            <div class="carre">
+                <div class="contour-image">
+                    <div class="survol-planete">
+                    </div>
+                    <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecarre()" style="width: 30px; height: 30px;">
+                    <img src="../img/terre planisphere 2.png" alt="test" class="planisphere" id="planisphere-terre">
+                </div>
+            </div>
         </div>
         <div class="contenu">
-            <div class="info-planete" id="">
+            <div class="info-planete">
                 <p> 
                     La Terre, notre planète bleue, est la troisième planète à partir du Soleil et la seule connue pour abriter la vie. 
                     <br>Dotée d'une atmosphère riche en oxygène, d'eau liquide abondante et d'une diversité d'écosystèmes, la Terre est un joyau de la complexité biologique et géologique. 
@@ -73,4 +85,9 @@
         </div>
     </div> 
 </body>
+<script>
+            
+    document.getElementById("planisphere-terre").addEventListener("mousemove", function(event){survole(event, "terre");});
+
+</script>
 </html>

@@ -6,7 +6,7 @@ function f(event) {
         window.location.href = "soleil.html";
     }
 
-    if (x >= 560 && x <= 580 && y >= 370 && y <= 390) {
+    if (x >= 580 && x <= 600 && y >= 370 && y <= 390) {
         window.location.href = "Mercure.html";
     }
 
@@ -81,6 +81,33 @@ function survole(event, page) {
         else if (x >= 2340 && x <= 2470 && y >= 310 && y <= 450) {
             afficherp(p, x, y, "Aller sur neptune");
         } 
+        else {
+            p.style.display = "none";
+        }
+    }
+
+    else if(page == "mercure"){}
+    else if(page == "venus"){}
+    else if(page == "terre"){
+
+        if (x >= 1050 && x <= 1200 && y >= 400 && y <= 500) {
+            afficherp(p, x, y, "États-Unis");
+        }
+        else if (x >= 1300 && x <= 1450 && y >= 300 && y <= 400) {
+            afficherp(p, x, y, "Brésil");
+        }
+        else if (x >= 1500 && x <= 1700 && y >= 200 && y <= 300) {
+            afficherp(p, x, y, "France");
+        }
+        else if (x >= 1800 && x <= 2000 && y >= 150 && y <= 250) {
+            afficherp(p, x, y, "Nigeria");
+        }
+        else if (x >= 2200 && x <= 2400 && y >= 100 && y <= 200) {
+            afficherp(p, x, y, "Inde");
+        }
+        else if (x >= 2600 && x <= 2800 && y >= 50 && y <= 150) {
+            afficherp(p, x, y, "Chine");
+        }
         else {
             p.style.display = "none";
         }
