@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/click.js"></script>
     <title>système solaire - Vénus</title>
 </head>
-<body>
+<body data-page="Venus">
     <header>
         <img src="../img/petite_fusee-removebg-preview.png" alt="fusee gauche" class="fuse" onclick="window.location.href='Mercure.html'">
         
@@ -36,7 +36,7 @@
         <div class="contenu">
             <div class="info-planete">
                 <p>
-                    Test
+                    Vénus est la deuxième planète la plus proche du Soleil et est souvent appelée la "sœur jumelle" de la Terre en raison de leur taille et composition similaires. Cependant, les conditions à la surface de Vénus sont extrêmement hostiles, avec des températures et des pressions écrasantes, ainsi qu'une atmosphère dense et toxique. Vénus fascine les astronomes depuis des siècles et continue de révéler ses mystères à travers diverses missions spatiales.
                 </p>
             </div>
             <table>
@@ -79,10 +79,55 @@
                 </tbody>
             </table>
             <div class="info-planete">
+                <h2>Informations générales :</h2>
                 <p>
-                    Test
+                    <strong>Caractéristiques générales</strong><br>
+                    Vénus est une planète rocheuse avec un diamètre d'environ 12 104 kilomètres, légèrement plus petite que la Terre. Sa masse est d'environ 4,87 x 10^24 kilogrammes, soit environ 81,5 % de celle de la Terre. Elle orbite autour du Soleil à une distance moyenne de 108,2 millions de kilomètres et met environ 225 jours terrestres pour compléter une révolution.
+                    <br><br>
+                    <strong>Surface et composition</strong><br>
+                    La surface de Vénus est principalement composée de plaines volcaniques, de vastes champs de lave, de montagnes et de cratères d'impact. Vénus possède des volcans en activité et des structures géologiques complexes, suggérant un passé volcanique intense. Sa composition est similaire à celle de la Terre, avec un noyau métallique entouré d'un manteau de silicates.
+                    <br><br>
+                    <strong>Atmosphère et climat</strong><br>
+                    L'atmosphère de Vénus est extrêmement dense et composée principalement de dioxyde de carbone, avec des traces d'azote et des nuages d'acide sulfurique. Cette atmosphère épaisse crée un effet de serre intense, entraînant des températures de surface atteignant 465 degrés Celsius, suffisamment chaudes pour faire fondre le plomb. La pression atmosphérique à la surface de Vénus est environ 92 fois celle de la Terre.
+                    <br><br>
+                    <strong>Rotation et révolution</strong><br>
+                    Vénus a une rotation rétrograde, tournant en sens inverse par rapport à la plupart des autres planètes du système solaire. Elle met environ 243 jours terrestres pour effectuer une rotation complète sur son axe, ce qui signifie qu'un jour vénusien (du lever au coucher du Soleil) dure environ 117 jours terrestres. Cette rotation lente et rétrograde est un des nombreux mystères entourant Vénus.
+                    <br><br>
+                    <strong>Exploration et observation</strong><br>
+                    Vénus a été l'objet de nombreuses missions spatiales, commençant par les sondes soviétiques Venera dans les années 1960 et 1970, qui ont réussi à transmettre des données depuis la surface. Plus récemment, les missions Magellan, Venus Express et Akatsuki ont fourni des informations détaillées sur l'atmosphère, la surface et le climat de Vénus. La NASA et d'autres agences spatiales prévoient de nouvelles missions, comme DAVINCI+ et VERITAS, pour explorer davantage cette planète fascinante.
                 </p>
             </div>
+
+            <div class="photos">
+                <a onclick="opencaroussel()"><h1>PLUS DE PHOTOS</h1></a>
+                <div id="test">
+                    <div class="carre-caroussel">
+                        <div class="contour-caroussel">
+                            <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
+                            <img src="" alt="test" class="photo-caroussel" id="photo-caroussel">
+                            <div class="photo-legende" id="photo-legende"></div>
+                            <div class="bouton">
+                                <button id="precedent-btn" onclick="precedenteImage()">précédent</button>            
+                                <button id="suivant-btn" onclick="prochaineImage()">suivant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-planete">
+                <h2>Missions vers Venus :  </h2>
+                <ul>
+                    <li>Mariner 2 : Survol de Venus</li>
+                    <li>Venera 3 : Atterrisseur sur Venus(echec)</li>
+                    <li>Venera 4 : Sonde sur Venus</li>
+                    <li>Mariner 5 : Survol de Venus</li>
+                    <li>Venera 7 : Atterrisseur sur Venus</li>
+                    <li>Venera 11 : Survole de Venus et Atterrisseur sur Venus</li>
+                    <li>MESSENGER 2 : Survol de Venus</li>
+                </ul>
+            </div>
+
         </div>
     </div> 
 </body>

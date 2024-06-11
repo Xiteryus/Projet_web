@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/click.js"></script>
     <title>système solaire - Mercure</title>
 </head>
-<body>
+<body data-page="Mercure">
 
     <header>
         <img src="../img/petite_fusee-removebg-preview.png" alt="Test" class="fuse" onclick="window.location.href='soleil.html'">
@@ -37,13 +37,8 @@
         <div class="contenu">
             <div class="info-planete" id="">
                 <p>
-                    Mars, souvent surnommée la "planète rouge" en raison de la couleur de son sol riche en oxyde de fer, est la quatrième planète du 
-                    système solaire en partant du Soleil. Fascinante et mystérieuse, Mars a toujours captivé l'imagination des scientifiques et des 
-                    astronomes, ainsi que celle du grand public. Avec ses calottes polaires de glace, ses vastes canyons et ses imposants volcans, 
-                    dont Olympus Mons, le plus grand volcan du système solaire, Mars présente un paysage diversifié et spectaculaire. <br>
-                    Planete la plus proche du soleil, Mercure est visible depuis la terre pendant de courtes périodes seulement.<br>
-                    On peut l'observer au printemps et en Automne,juste au dessous de l'horizon au crépuscule et à l'aube.
-                </p>
+                    Mercure est la planète la plus proche du Soleil et la plus petite du système solaire. Malgré sa proximité avec notre étoile, Mercure possède des températures extrêmes et une surface criblée de cratères qui témoignent de son histoire géologique tumultueuse. Sa faible atmosphère et sa composition principalement rocheuse en font un objet d'étude fascinant pour les astronomes et les planétologues.
+                    </p>
             </div>
             <table>
                 <caption>Mercure en chiffre</caption>
@@ -84,18 +79,59 @@
                     
                 </tbody>
             </table>
-            <div>
-                <p>Mercure est une petite planete, dense et couverte de crateres, si proche du soleil qu'elle est sans cesse brulée par les éruptions solaires.</p>
-            </div>
+
             <div class="info-planete">
-                <p>La surface de Mercure est marquée par de nombreux cratères, vestiges de son passé tumultueux. Ces impacts, combinés à l'absence d'atmosphère significative pour les éroder, donnent à la planète une apparence semblable à celle de notre Lune. Parmi les formations les plus notables se trouve le bassin Caloris, un cratère géant de 1 550 kilomètres de diamètre, causé par un impact massif.</p>
+                <h2>Informations générales :</h2>
+                <p>
+                    <strong>Caractéristiques générales</strong><br>
+                    Mercure est une planète rocheuse avec un diamètre d'environ 4 880 kilomètres, soit environ 38 % de celui de la Terre. Sa masse est d'environ 3,3 x 10^23 kilogrammes, ce qui représente environ 5,5 % de la masse terrestre. En raison de sa proximité avec le Soleil, Mercure orbite à une distance moyenne de 57,9 millions de kilomètres et complète une révolution en seulement 88 jours terrestres.
+                    <br><br>
+                    <strong>Surface et composition</strong><br>
+                    La surface de Mercure est semblable à celle de la Lune, avec de nombreux cratères d'impact, des bassins de lave solidifiée et des falaises abruptes appelées escarpements. La composition de Mercure est dominée par des silicates et des métaux, avec un noyau de fer qui représente environ 60 % de la masse de la planète, l'une des plus grandes proportions de noyau parmi les planètes du système solaire.
+                    <br><br>
+                    <strong>Atmosphère et climat</strong><br>
+                    Mercure possède une exosphère très fine composée principalement d'atomes de sodium, de potassium et d'oxygène, éjectés de la surface par le vent solaire et les micrométéorites. Les températures sur Mercure varient considérablement, atteignant jusqu'à 430 degrés Celsius en journée et plongeant à -180 degrés Celsius la nuit, en raison de l'absence d'une atmosphère dense pour retenir la chaleur.
+                    <br><br>
+                    <strong>Rotation et révolution</strong><br>
+                    Mercure a une rotation particulière appelée résonance spin-orbite 3:2, où elle tourne trois fois sur son axe pour chaque deux orbites autour du Soleil. Cela signifie qu'un jour solaire (du lever au coucher du Soleil) sur Mercure dure environ 176 jours terrestres.
+                    <br><br>
+                    <strong>Exploration et observation</strong><br>
+                    Mercure a été étudiée par plusieurs missions spatiales, notamment Mariner 10 dans les années 1970 et MESSENGER entre 2011 et 2015. Ces missions ont fourni des images détaillées et des données sur la composition, la géologie et le champ magnétique de Mercure. La mission BepiColombo, lancée en 2018 par l'ESA et la JAXA, continue d'approfondir notre compréhension de cette planète intrigante, avec une arrivée prévue en orbite en 2025.
+                </p>
             </div>
+
+            <div class="photos">
+                <a onclick="opencaroussel()"><h1>PLUS DE PHOTOS</h1></a>
+                <div id="test">
+                    <div class="carre-caroussel">
+                        <div class="contour-caroussel">
+                            <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
+                            <img src="" alt="test" class="photo-caroussel" id="photo-caroussel">
+                            <div class="photo-legende" id="photo-legende"></div>
+                            <div class="bouton">
+                                <button id="precedent-btn" onclick="precedenteImage()">précédent</button>            
+                                <button id="suivant-btn" onclick="prochaineImage()">suivant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-planete">
+                <h2>Missions vers Mercure :  </h2>
+                <ul>
+                    <li>Mariner 10 : Survol de Mercure</li>
+                    <li>MESSENGER : Orbite de Mercure</li>
+                    <li>BepiColombo(prévu) : Orbite de Mercure</li>
+                </ul>
+            </div>
+        </div>
         </div>  
     </div>
 </body>
 <script>
             
-    document.getElementById("planisphere-mercure").addEventListener("mousemove", function(event){survole(event, "mercure");});
+    document.getElementById("planisphere-mercure").addEventListener("mousemove", function(event){survole(event, "Mercure");});
 
 </script>
 </html>

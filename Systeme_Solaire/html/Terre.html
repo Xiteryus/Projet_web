@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/click.js"></script>
     <title>système solaire - Terre</title>
 </head>
-<body>
+<body data-page="Terre">
     <header>
         <img src="../img/petite_fusee-removebg-preview.png" alt="Test" class="fuse" onclick="window.location.href='Venus.html'">
         
@@ -30,17 +30,14 @@
                     <div class="survol-planete">
                     </div>
                     <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecarre()" style="width: 30px; height: 30px;">
-                    <img src="../img/terre planisphere 2.png" alt="test" class="planisphere" id="planisphere-terre">
+                    <img src="../img/terre planisphere.jpg" alt="test" class="planisphere" id="planisphere-terre">
                 </div>
             </div>
         </div>
         <div class="contenu">
             <div class="info-planete">
-                <p> 
-                    La Terre, notre planète bleue, est la troisième planète à partir du Soleil et la seule connue pour abriter la vie. 
-                    <br>Dotée d'une atmosphère riche en oxygène, d'eau liquide abondante et d'une diversité d'écosystèmes, la Terre est un joyau de la complexité biologique et géologique. 
-                    <br>Sa surface est couverte de continents, d'océans, de montagnes et de déserts, formant un paysage dynamique et en constante évolution. La Terre possède également un champ magnétique puissant qui protège ses habitants des radiations solaires nocives. 
-                    <br>La rotation de la Terre sur son axe et son orbite autour du Soleil créent les cycles jour-nuit et les saisons, influençant ainsi le climat et les conditions de vie sur toute la planète.
+                <p>
+                    La Terre est la troisième planète à partir du Soleil et la seule connue à abriter la vie. Dotée d'une atmosphère protectrice, d'une surface riche en eau liquide et d'une diversité biologique exceptionnelle, la Terre est notre foyer. Sa position unique dans le système solaire permet des conditions idéales pour le développement et la durabilité de la vie.
                 </p>
             </div>
             <table>
@@ -81,7 +78,57 @@
                     </tr>
                 </tbody>
             </table>
-            
+            <div class="info-planete">
+                <h2>Informations générales :</h2>
+                <p>
+                    <strong>Caractéristiques générales</strong><br>
+                    La Terre est une planète rocheuse avec un diamètre d'environ 12 742 kilomètres. Sa masse est d'environ 5,97 x 10^24 kilogrammes. Elle orbite autour du Soleil à une distance moyenne de 149,6 millions de kilomètres et met environ 365,25 jours pour compléter une révolution, définissant ainsi une année terrestre.
+                    <br><br>
+                    <strong>Structure et composition</strong><br>
+                    La Terre est composée de plusieurs couches : la croûte, le manteau et le noyau (divisé en noyau externe liquide et noyau interne solide). La croûte terrestre est divisée en plaques tectoniques qui se déplacent lentement, provoquant des séismes et la formation de montagnes. La composition de la Terre comprend principalement des silicates et des oxydes métalliques.
+                    <br><br>
+                    <strong>Atmosphère et climat</strong><br>
+                    L'atmosphère terrestre est composée principalement d'azote (78 %) et d'oxygène (21 %), avec de petites quantités d'autres gaz comme le dioxyde de carbone et l'argon. Cette atmosphère protège la vie en filtrant les rayons ultraviolets nocifs du Soleil et en régulant la température grâce à l'effet de serre naturel. Le climat de la Terre varie considérablement selon les régions, influencé par les océans, les montagnes et la latitude.
+                    <br><br>
+                    <strong>Hydrosphère et biosphère</strong><br>
+                    Environ 71 % de la surface de la Terre est recouverte d'eau, principalement sous forme d'océans. Cette hydrosphère joue un rôle crucial dans le climat et les cycles biogéochimiques. La biosphère terrestre est incroyablement diverse, abritant des millions d'espèces de plantes, d'animaux et de micro-organismes qui interagissent dans des écosystèmes complexes.
+                    <br><br>
+                    <strong>Rotation et révolution</strong><br>
+                    La Terre tourne sur son axe en environ 24 heures, créant le cycle jour-nuit. L'inclinaison de l'axe terrestre de 23,5 degrés par rapport à son plan orbital est responsable des saisons. Cette inclinaison et la rotation de la Terre influencent les climats et les conditions météorologiques.
+                    <br><br>
+                    <strong>Exploration et observation</strong><br>
+                    L'exploration de la Terre se fait principalement à travers l'observation scientifique et les technologies spatiales. Les satellites en orbite fournissent des données cruciales pour la météorologie, la surveillance environnementale et les communications. Des missions comme celles des satellites Landsat et des programmes de la NASA et de l'ESA permettent de mieux comprendre notre planète et ses dynamiques.
+                </p>
+            </div>
+
+            <div class="photos">
+                <a onclick="opencaroussel()"><h1>PLUS DE PHOTOS</h1></a>
+                <div id="test">
+                    <div class="carre-caroussel">
+                        <div class="contour-caroussel">
+                            <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
+                            <img src="" alt="test" class="photo-caroussel" id="photo-caroussel">
+                            <div class="photo-legende" id="photo-legende"></div>
+                            <div class="bouton">
+                                <button id="precedent-btn" onclick="precedenteImage()">précédent</button>            
+                                <button id="suivant-btn" onclick="prochaineImage()">suivant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-planete">
+                <h2>Découvertes géographiques de la Terre :</h2>
+                <ul>
+                    <li>1492 - Christophe Colomb découvre les Amériques.</li>
+                    <li>1498 - Vasco de Gama atteint l'Inde.</li>
+                    <li>1519-1522 - Ferdinand Magellan et son équipage réalisent le premier tour du monde, prouvant que la Terre est ronde.</li>
+                    <li>1770 - James Cook explore et cartographie la côte est de l'Australie.</li>
+                    <li>1820 - Les explorateurs russes Bellingshausen et Lazarev sont les premiers à apercevoir le continent Antarctique.</li>
+                </ul>
+                
+            </div>
         </div>
     </div> 
 </body>
