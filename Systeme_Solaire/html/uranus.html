@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../js/click.js"></script>
     <title>système solaire - Uranus</title>
 </head>
-<body>
+<body data-page="uranus">
     <header>
         <img src="../img/petite_fusee-removebg-preview.png" alt="Test" class="fuse" onclick="window.location.href='saturne.html'">
         
@@ -21,7 +21,22 @@
     </header>
     <div class = global>
         <div class="Gauche">
-            <img src="../img/uranus.gif" alt="test" class="image-planete">
+            <img src="../img/uranus.gif" alt="test" class="image-planete" onclick="opencaroussel()">
+        </div>
+        <div class="photos">
+            <div id="test">
+                <div class="carre-caroussel">
+                    <div class="contour-caroussel">
+                        <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
+                        <img src="" alt="test" class="photo-caroussel" id="photo-caroussel">
+                        <div class="photo-legende" id="photo-legende"></div>
+                        <div class="bouton">
+                            <button id="precedent-btn" onclick="precedenteImage()">précédent</button>            
+                            <button id="suivant-btn" onclick="prochaineImage()">suivant</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="contenu">
             <div class="info-planete" id="">

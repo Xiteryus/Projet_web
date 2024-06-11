@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Planete.css">
+    <link rel="stylesheet" href="../css/Planete.css">h
     <script type="text/javascript" src="../js/click.js"></script>
     <title>système solaire - Soleil</title>
 </head>
-<body>
+<body data-page="soleil">
 
     <header>
         <img src="../img/petite_fusee-removebg-preview.png" alt="Test" class="fuse" onclick="window.location.href='pluton.html'">
@@ -22,14 +22,23 @@
     </header>
     <div class = global>
         <div class="Gauche">
-            <img src="../img/soleil.gif" alt="Gif Mercure" id="Mercure" class="image-planete" onclick="opencarre()">
-            <div class="contour-carre">
-                <div class="carre">
-                    <button type="button" class="btn-close" aria-label="Close" onclick="closecarre()"></button>
-                    <img src="../img/fond d'ecran accueil.jpeg" alt="test">
+            <img src="../img/soleil.gif" alt="Gif Mercure" id="Mercure" class="image-planete" onclick="opencaroussel()">
+        </div>
+        <div class="photos">
+                <div id="test">
+                    <div class="carre-caroussel">
+                        <div class="contour-caroussel">
+                            <img src="../img/signe-de-la-croix.png" alt="" class="btn-close" onclick="closecaroussel()" style="width: 30px; height: 30px;">
+                            <img src="" alt="test" class="photo-caroussel" id="photo-caroussel">
+                            <div class="photo-legende" id="photo-legende"></div>
+                            <div class="bouton">
+                                <button id="precedent-btn" onclick="precedenteImage()">précédent</button>            
+                                <button id="suivant-btn" onclick="prochaineImage()">suivant</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="contenu">
             <div class="info-planete" id="">
                 <p>
@@ -85,9 +94,9 @@
             </div>
             <div class="info-planete">
                 <p>La surface de Mercure est marquée par de nombreux cratères, vestiges de son passé tumultueux. Ces impacts, combinés à l'absence d'atmosphère significative pour les éroder, donnent à la planète une apparence semblable à celle de notre Lune. Parmi les formations les plus notables se trouve le bassin Caloris, un cratère géant de 1 550 kilomètres de diamètre, causé par un impact massif.</p>
-                <img src="../img/Mercure-Carte.png" alt="Carte mercure">
             </div>
         </div>  
     </div>
 </body>
+
 </html>

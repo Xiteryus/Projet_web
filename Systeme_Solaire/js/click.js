@@ -41,6 +41,10 @@ function f(event) {
     if (x >= 2340 && x <= 2470 && y >= 310 && y <= 450) {
         window.location.href = "neptune.html";
     } 
+    
+    if (x >= 2754 && x <= 2762 && y >= 375 && y <= 385) {
+        window.location.href = "pluton.html";
+    } 
 }
 
 function survole(event, page) {
@@ -81,6 +85,9 @@ function survole(event, page) {
         else if (x >= 2340 && x <= 2470 && y >= 310 && y <= 450) {
             afficherp(p, x, y, "Aller sur neptune");
         } 
+        else if (x >= 2754 && x <= 2762 && y >= 375 && y <= 385) {
+            afficherp(p, x, y, "Aller sur pluton");
+        } 
         else {
             p.style.display = "none";
         }
@@ -88,30 +95,7 @@ function survole(event, page) {
 
     else if(page == "mercure"){}
     else if(page == "venus"){}
-    else if(page == "terre"){
-
-        if (x >= 1050 && x <= 1200 && y >= 400 && y <= 500) {
-            afficherp(p, x, y, "États-Unis");
-        }
-        else if (x >= 1300 && x <= 1450 && y >= 300 && y <= 400) {
-            afficherp(p, x, y, "Brésil");
-        }
-        else if (x >= 1500 && x <= 1700 && y >= 200 && y <= 300) {
-            afficherp(p, x, y, "France");
-        }
-        else if (x >= 1800 && x <= 2000 && y >= 150 && y <= 250) {
-            afficherp(p, x, y, "Nigeria");
-        }
-        else if (x >= 2200 && x <= 2400 && y >= 100 && y <= 200) {
-            afficherp(p, x, y, "Inde");
-        }
-        else if (x >= 2600 && x <= 2800 && y >= 50 && y <= 150) {
-            afficherp(p, x, y, "Chine");
-        }
-        else {
-            p.style.display = "none";
-        }
-    }
+    else if(page == "terre"){}
 
     else if(page == "mars"){
         if (x >= 154 - 5 && x <= 154 + 5 && y >= 233 - 5 && y <= 233 + 5) {
@@ -169,30 +153,73 @@ function closecaroussel() {
 
 
 //-----------------------------
-const images = [
-    { src: '../img/Jupiter1.webp', legende: 'Nuage Jupiter' },
-    { src: '../img/jupiter2.webp', legende: 'Nuage Jupiter' },
-    { src: '../img/jupiter3.webp', legende: 'Nuage Jupiter' },
+const imagesJupiter = [
+    {src: '../img/Jupiter1.webp', legende: 'Nuage Jupiter' },
+    {src: '../img/jupiter2.webp', legende: 'Nuage Jupiter' },
+    {src: '../img/jupiter3.webp', legende: 'Nuage Jupiter' },
     {src:'../img/jupiter4.jpg', legende :'Satelite de Jupiter : Europe'},
-    {src:'../img/Jupiter5.webp',legende: 'Anneaux de Jupiter vus par Voyager 2'}
+    {src:'../img/Jupiter5.webp', legende: 'Anneaux de Jupiter vus par Voyager 2'}
 ];
-
+const imagesSoleil = [
+    {src: '../img/Soleil1.jpeg', legende: 'Soleil qui sourit' },
+    {src: '../img/Soleil2.jpg', legende: 'Eruption solaire' },
+    {src: '../img/Soleil3.jpg', legende: 'Le Soleil vu par le Solar Orbiter' },
+    {src:'../img/Soleil4.webp', legende :'Les couches du Soleil'},
+    {src:'../img/Soleil5.jpg', legende: 'Photo du Soleil avec 90000 images'}
+];
+const imagesSaturne = [
+    {src: '../img/saturne1.jpg', legende: 'Photo de Saturne' },
+    {src: '../img/saturne2.webp', legende: 'Anneaux de Saturne' },
+    {src: '../img/saturne3.jpg', legende: 'Saturne pris par James Webb' },
+    {src:'../img/saturne4.webp', legende :'La lune Titan devant Saturne'},
+    {src:'../img/saturne5.webp', legende: 'Saturne pris par Cassini'}
+];
+const imagesUranus = [
+    {src: '../img/uranus1.jpg', legende: "Vrai couleur d'Uranus" },
+    {src: '../img/uranus2.webp', legende: 'Tempete phenomenale sur Uranus' },
+    {src: '../img/uranus3.webp', legende: 'Uranus et ces Anneaux pris par James Webb' },
+    {src:'../img/uranus4.jpg', legende :"Lune Ariel d'Uranus"},
+    {src:'../img/uranus5.jpg', legende: 'Uranus pris par Hubble'}
+];
+let imagesPage;
 let currentIndex = 0;
 
+function selectImageSet() {
+    const page = document.body.getAttribute('data-page');
+    if (page === 'soleil') {
+        imagesPage = imagesSoleil;
+    } 
+    else if (page === 'jupiter') {
+        imagesPage = imagesJupiter;
+    }
+    else if (page === 'saturne') {
+        imagesPage = imagesSaturne;
+    }
+    else if (page === 'uranus') {
+        imagesPage = imagesUranus;
+    }
+}
+
 function updateCaroussel() {
-    document.getElementById('photo-caroussel').src = images[currentIndex].src;
-    document.getElementById('photo-legende').innerText = images[currentIndex].legende;
+    document.getElementById('photo-caroussel').src = imagesPage[currentIndex].src;
+    document.getElementById('photo-legende').innerText = imagesPage[currentIndex].legende;
     document.getElementById('precedent-btn').disabled = currentIndex === 0;
+    document.getElementById('suivant-btn').disabled = currentIndex === imagesPage.length - 1;
 }
 
 function prochaineImage() {
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 1) % imagesPage.length;
     updateCaroussel();
 }
 
 function precedenteImage() {
     if (currentIndex > 0) {
-        currentIndex = (currentIndex - 1) % images.length;
+        currentIndex = (currentIndex - 1) % imagesPage.length;
         updateCaroussel();
     }
 }
+
+window.onload = function() {
+    selectImageSet();
+    updateCaroussel(0);
+};
