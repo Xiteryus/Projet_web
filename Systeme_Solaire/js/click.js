@@ -213,54 +213,73 @@ const imagesSoleil = [
     {src:'../img/Soleil5.jpg', legende: 'Photo du Soleil avec 90000 images'}
 ];
 const imagesMercure =[
-    {src:'../img/Mercure1.jpeg',legende:'Mercure'},
-    {src:'../img/Mercure2.jpeg',legende:'Mercure'},
+    {src:'../img/mercure1.jpg',legende:'Mercure'},
+    {src:'../img/mercure2.webp',legende:'Mercure'},
     {src:'../img/Mercure3.png',legende:'Les couches de Mercure'},
+    {src:'../img/mercure4.avif',legende:'Mercure avec relief'},
 ];
 const imagesVenus =[
     {src:'../img/Venus1.jpg',legende:'Surface de Vénus est cachée par son épaisse atmosphère'},
-    {src:'../img/Venus2.jpeg',legende:'Venus'},
+    {src:'../img/venus2.jpg',legende:'Venus'},
     {src:'../img/Venus3.jpg',legende:'Vue reconstituée du volcan vénusien Maat Mons à partir des images radar prises par la sonde Magellan en 1996.'},
     {src:'../img/Venus4.webp',legende:'Photo colorisée de la surface de Vénus. Elle a été prise par le vaisseau spatial russe Venera 13 le 1er mars 1982.'},
-    {src:'../img/Venus5.jpg',legende:'Les couches de Ve,us'}];
+    {src:'../img/Venus5.jpg',legende:'Les couches de Venus'}];
 const imagesTerre =[
-    {src:'../img/Terre1.jpeg',legende:"Terre depuis l'espace"},
+    {src:'../img/terre1.jpg',legende:"Terre depuis l'espace"},
     {src:'../img/Terre2.webp',legende:'Terre vu depuis lune'},
     {src:'../img/Terre3.jpg',legende:"Terre vu depuis l'ISS"},
     {src:'../img/Terre4.png',legende:'Les couches de la Terre'}
 ];
 const imagesMars =[
-    {src:'../img/Mars1.jpeg',legende:'Mars'},
-    {src:'../img/Mars2.jpeg',legende:'Surface de Mars'},
-    {src:'../img/Mars3.jpeg',legende:'Surface de Mars et le rover MSL Curiosity'},
-    {src:'../img/Mars4.jpeg',legende:'Lune de Mars : Phobos'},
-    {src:'../img/Mars5.jpg',legende:'Les couches de Mars'}
+    {src:'../img/mars1.webp',legende:'Mars'},
+    {src:'../img/mars2.webp',legende:'Surface de Mars'},
+    {src:'../img/mars3.jpg',legende:'Surface de Mars et le rover MSL Curiosity'},
+    {src:'../img/mars4.webp',legende:'Lune de Mars : Phobos'},
+    {src:'../img/Mars5.jpg',legende:'Les couches de Mars'},
+    {src:'../img/Mars6.jpg',legende:'Mont Olympus'}
 ];
 const imagesCeres =[
     {src:'../img/Ceres1.jpg',legende:'Ceres'},
-    {src:'../img/Ceres2.jpeg',legende:'Les couches de Ceres'},
-
+    {src:'../img/ceres2.jpg',legende:'Les couches de Ceres'},
+    {src:'../img/ceres3.webp',legende:"Cratere Occator. Brillant car composé de sel d'Epsom (fausse couleur)"},
 ];
 const imagesJupiter = [
     {src: '../img/Jupiter1.webp', legende: 'Nuage Jupiter' },
     {src: '../img/jupiter2.webp', legende: 'Nuage Jupiter' },
     {src: '../img/jupiter3.webp', legende: 'Nuage Jupiter' },
     {src:'../img/jupiter4.jpg', legende :'Satelite de Jupiter : Europe'},
-    {src:'../img/Jupiter5.webp', legende: 'Anneaux de Jupiter vus par Voyager 2'}
+    {src:'../img/Jupiter5.webp', legende: 'Anneaux de Jupiter vus par Voyager 2'},
+    {src:'../img/jupiter6.jpg', legende: 'Couche de Jupiter'}
 ];
 const imagesSaturne = [
     {src: '../img/saturne1.jpg', legende: 'Photo de Saturne' },
     {src: '../img/saturne2.webp', legende: 'Anneaux de Saturne' },
     {src: '../img/saturne3.jpg', legende: 'Saturne pris par James Webb' },
     {src:'../img/saturne4.webp', legende :'La lune Titan devant Saturne'},
-    {src:'../img/saturne5.webp', legende: 'Saturne pris par Cassini'}
+    {src:'../img/saturne5.webp', legende: 'Saturne pris par Cassini'},
+    {src:'../img/saturne6.png', legende: 'Couche de Saturne'}
 ];
 const imagesUranus = [
     {src: '../img/uranus1.jpg', legende: "Vrai couleur d'Uranus" },
     {src: '../img/uranus2.webp', legende: 'Tempete phenomenale sur Uranus' },
-    {src: '../img/uranus3.webp', legende: 'Uranus et ces Anneaux pris par James Webb' },
+    {src: '../img/uranus3.webp', legende: 'Uranus et ces anneaux pris par James Webb' },
     {src:'../img/uranus4.jpg', legende :"Lune Ariel d'Uranus"},
-    {src:'../img/uranus5.jpg', legende: 'Uranus pris par Hubble'}
+    {src:'../img/uranus5.jpg', legende: 'Uranus pris par Hubble'},
+    {src:'../img/uranus6.jpg', legende: "Couche d'Uranus"},
+];
+const imagesNeptune = [
+    {src: '../img/neptune1.webp', legende: "Neptune" },
+    {src: '../img/neptune2.jpg', legende: 'Neptune vu par Voyager 2' },
+    {src: '../img/neptune3.jpeg', legende: 'Neptune et ces anneaux pris par James Webb' },
+    {src:'../img/neptune4.webp', legende : "Lune Titan de Neptune"},
+    {src:'../img/neptune5.jpg', legende: 'Couche de Neptune'}
+];
+const imagesPluton = [
+    {src: '../img/pluton1.jpg', legende: "Pluton" },
+    {src: '../img/pluton2.jpg', legende: 'Orbite de Pluton' },
+    {src: '../img/pluton3.jpg', legende: 'Surface de Pluton' },
+    {src:'../img/pluton4.jpg', legende : "Charon lune de Pluton"},
+    {src:'../img/pluton5.jpg', legende: 'Couche de Pluton'}
 ];
 
 //-----------------------------
@@ -288,8 +307,6 @@ function selectImageSet() {
     else if (page === 'ceres') {
         imagesPage = imagesCeres;
     }
-
-
     else if (page === 'jupiter') {
         imagesPage = imagesJupiter;
     }
@@ -299,7 +316,12 @@ function selectImageSet() {
     else if (page === 'uranus') {
         imagesPage = imagesUranus;
     }
-
+    else if (page === 'neptune') {
+        imagesPage = imagesNeptune;
+    }
+    else if (page === 'pluton') {
+        imagesPage = imagesPluton;
+    }
 }
 
 function updateCaroussel() {
